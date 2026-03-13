@@ -76,8 +76,8 @@ resource "aws_eks_node_group" "node-grp" {
   }
 
   update_config {
-    max_unavailable = 1
-  }
+  max_unavailable_percentage = 50
+}
 }
 
 locals {
@@ -102,3 +102,4 @@ resource "aws_eks_addon" "example" {
   addon_version               = each.value.version
   resolve_conflicts_on_update = each.value.resolve_conflicts
 }
+
