@@ -93,3 +93,17 @@ Drain
 Replace with new node  
 ↓  
 Reschedule pods
+
+
+
+
+## Resume Points – EKS Cluster Upgrade
+
+- Planned and executed AWS EKS cluster version upgrades while minimizing downtime for production workloads.
+- Managed node group upgrades using Terraform, ensuring worker nodes remained compatible with upgraded cluster versions.
+- Implemented default EKS addons (CoreDNS, kube-proxy, VPC CNI, EBS CSI driver, pod identity) with automated upgrade paths using Terraform.
+- Applied sequential addon deployment (depends_on) to reduce provisioning time and avoid AWS API throttling during upgrades.
+- Leveraged Terraform variables and version control to dynamically manage cluster, node group, and addon versions for repeatable deployments.
+- Ensured zero-impact upgrades by using rolling node updates, maintaining service availability during cluster version changes.
+- Automated cluster and addon upgrades using Terraform best practices, including force_update_version and version pinning when needed.
+- Monitored and validated post-upgrade cluster health, addon readiness, and application stability using AWS console and kubectl.
