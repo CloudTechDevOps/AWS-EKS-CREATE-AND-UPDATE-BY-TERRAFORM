@@ -1,2 +1,0 @@
-eksctl utils describe-addon-versions --kubernetes-version 1.29 | grep -A 10 vpc-cni
-eksctl utils describe-addon-versions --kubernetes-version 1.29 | grep -A 10 kube-proxy
